@@ -1,0 +1,811 @@
+
+#label0_60:
+
+#label1_60:
+
+#label2_60:
+	CallFar(target: FarLabelRef(7, 33), returnAddress: ReturnAddressRef(0))
+	CallFar(target: FarLabelRef(7, 186), returnAddress: ReturnAddressRef(1))
+	MessWindow_Hide(messWindowId: 0)
+	MessWindow_AwaitHideCurrent
+	CallFar(target: FarLabelRef(6, 767), returnAddress: ReturnAddressRef(2))
+	CallFar(target: FarLabelRef(6, 45), returnAddress: ReturnAddressRef(3))
+	CallFar(target: FarLabelRef(6, 47), returnAddress: ReturnAddressRef(4))
+	GlobalVars[38] = 63
+	CallFar(target: FarLabelRef(6, 1537), returnAddress: ReturnAddressRef(5))
+	GlobalVars[4316] = 70
+	GlobalVars[2191] = 64
+	SEplay(channel: 1, type: 0, effect: 179, loop: 1)
+	CallFar(target: FarLabelRef(6, 791), returnAddress: ReturnAddressRef(6))
+	Mwait(delay: 128, unused: 0)
+	BGMplay(loop: 1, track: 3)
+	Mwait(delay: 32, unused: 0)
+	CallFar(target: FarLabelRef(7, 34), returnAddress: ReturnAddressRef(7))
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 8)
+	AutoSave_05
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 9)
+	AutoSave_QuickSave
+	Save(arg: 46)
+	Save(arg: 47)
+	Save(arg: 40)
+	Save(arg: 41)
+	MesSetID_SetSavePoint(savePointId: 10)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 121, animationId: GlobalVars[1400], characterId: 0, line: StringRef(0))	; [name]比企谷八幡[line]「やっぱ人多いな」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(11))
+	CHAload(type: 0, bufferId: 16, spriteId: 65760, unused: 2832)
+	GlobalVars[5260] = 600
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(12))
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131296, unused: 2832)
+	CallFar(target: FarLabelRef(6, 445), returnAddress: ReturnAddressRef(13))
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 14)
+	AutoSave_05
+	SetFlag(flag: FlagRef(1288))
+	SetFlag(flag: FlagRef(457))
+	SetFlag(flag: FlagRef(458))
+	CreateThread(threadId: 5, entrypoint: FarLabelRef(3, 10))
+	MesSetID_SetSavePoint(savePointId: 15)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 144, animationId: GlobalVars[1404], characterId: 8, line: StringRef(1))	; [name]比企谷小町[line]「それだけ、みんなお願いしたいことがあるんだよ。世界は夢と希望にあふれてるってことだね。あ、今の小町的にポイント高いかも！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(457))
+	FlagOnWait(condition: 1, flag: FlagRef(458))
+	MesSetID_SetSavePoint(savePointId: 16)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 122, animationId: GlobalVars[1400], characterId: 0, line: StringRef(2))	; [name]比企谷八幡[line]「低い低い。世界は欲望に満ち溢れてるなんて地獄そのものじゃねぇか」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 65760, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(17))
+	MesSetID_SetSavePoint(savePointId: 18)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 145, animationId: GlobalVars[1404], characterId: 8, line: StringRef(3))	; [name]比企谷小町[line]「だからこそ、みんなお参りするんだよ。地獄に仏って言うじゃん？」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 19)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 123, animationId: GlobalVars[1400], characterId: 0, line: StringRef(4))	; [name]比企谷八幡[line]「ここ神社だけどな。まぁ、人間なんて他人も自分もあてにならんからな。神に祈りたくもなるよな」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 393440, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(20))
+	MesSetID_SetSavePoint(savePointId: 21)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 146, animationId: GlobalVars[1404], characterId: 8, line: StringRef(5))	; [name]比企谷小町[line]「夢も希望もないなぁ。それ、小町的にポイント低い」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 524512, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(22))
+	MesSetID_SetSavePoint(savePointId: 23)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 147, animationId: GlobalVars[1404], characterId: 8, line: StringRef(6))	; [name]比企谷小町[line]「はぁ。小町、受験より今年のお兄ちゃんの方が心配になってきたよ」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 24)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 124, animationId: GlobalVars[1400], characterId: 0, line: StringRef(7))	; [name]比企谷八幡[line]「そうか？ 俺は別に心配してないけどな。俺のことも、小町のことも。特に小町のことは全然心配しとらん。他人も神も信じないが、小町のことは信じてるからな！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 25)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(8))	; [name]比企谷八幡[line]（ふっ、決まった、また中身のない良いことを言ってしまったぜ）[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 65760, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(26))
+	MesSetID_SetSavePoint(savePointId: 27)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 148, animationId: GlobalVars[1404], characterId: 8, line: StringRef(9))	; [name]比企谷小町[line]「お兄ちゃん。小町はお兄ちゃんのことまったく信じてないけどありがとう！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 28)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 125, animationId: GlobalVars[1400], characterId: 0, line: StringRef(10))	; [name]比企谷八幡[line]「信じて？ お兄ちゃんの愛だけは信じて？」[%p]
+	MesMain_DisplayDialogue
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(29))
+	MesSetID_SetSavePoint(savePointId: 30)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(11))	; そんな他愛もないやり取りをしながら、ゆっくりお参りの列を進んでいると。[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(31))
+	CHAload(type: 0, bufferId: 16, spriteId: 458978, unused: 2832)
+	GlobalVars[5260] = 600
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(32))
+	MesSetID_SetSavePoint(savePointId: 33)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 149, animationId: GlobalVars[1404], characterId: 8, line: StringRef(12))	; [name]比企谷小町[line]「あ」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 34)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 126, animationId: 0, characterId: 0, line: StringRef(13))	; [name]比企谷八幡[line]「ん？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 65762, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(35))
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131298, unused: 2832)
+	CallFar(target: FarLabelRef(6, 445), returnAddress: ReturnAddressRef(36))
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 37)
+	AutoSave_05
+	SetFlag(flag: FlagRef(1288))
+	SetFlag(flag: FlagRef(457))
+	SetFlag(flag: FlagRef(458))
+	CreateThread(threadId: 5, entrypoint: FarLabelRef(3, 8))
+	MesSetID_SetSavePoint(savePointId: 38)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 150, animationId: GlobalVars[1404], characterId: 8, line: StringRef(14))	; [name]比企谷小町[line]「雪乃さんと結衣さんだ！ おーい！ 雪乃さーん！ 結衣さーん！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(457))
+	FlagOnWait(condition: 1, flag: FlagRef(458))
+	MessWindow_Hide(messWindowId: 0)
+	MessWindow_AwaitHideCurrent
+	GlobalVars[2190] = 32
+	BGMstop(zero: 0)
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(39))
+	Mwait(delay: 64, unused: 0)
+	BGMplay(loop: 1, track: 33)
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(40))
+	CHAload(type: 0, bufferId: 16, spriteId: 66118, unused: 2832)
+	GlobalVars[5260] = 213
+	ResetFlag(flag: FlagRef(2415))
+	CallFar(target: FarLabelRef(6, 103), returnAddress: ReturnAddressRef(41))
+	CHAload(type: 0, bufferId: 32, spriteId: 66230, unused: 2832)
+	GlobalVars[5300] = 360
+	CallFar(target: FarLabelRef(6, 276), returnAddress: ReturnAddressRef(42))
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131654, unused: 2832)
+	CallFar(target: FarLabelRef(6, 445), returnAddress: ReturnAddressRef(43))
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 44)
+	AutoSave_05
+	SetFlag(flag: FlagRef(1288))
+	SetFlag(flag: FlagRef(457))
+	SetFlag(flag: FlagRef(458))
+	CreateThread(threadId: 5, entrypoint: FarLabelRef(3, 11))
+	MesSetID_SetSavePoint(savePointId: 45)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 166, animationId: GlobalVars[1402], characterId: 4, line: StringRef(15))	; [name]由比ヶ浜結衣[line]「あ！ 小町ちゃん！と、ヒッキー！ やっはろー！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(457))
+	FlagOnWait(condition: 1, flag: FlagRef(458))
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(46))
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(47))
+	CHAload(type: 0, bufferId: 16, spriteId: 131622, unused: 2832)
+	GlobalVars[5260] = 180
+	ResetFlag(flag: FlagRef(2415))
+	CallFar(target: FarLabelRef(6, 103), returnAddress: ReturnAddressRef(48))
+	CHAload(type: 0, bufferId: 32, spriteId: 131318, unused: 2832)
+	GlobalVars[5300] = 747
+	ResetFlag(flag: FlagRef(2416))
+	CallFar(target: FarLabelRef(6, 104), returnAddress: ReturnAddressRef(49))
+	CHAload(type: 0, bufferId: 64, spriteId: 131728, unused: 2832)
+	GlobalVars[5340] = 360
+	CallFar(target: FarLabelRef(6, 300), returnAddress: ReturnAddressRef(50))
+	MesSetID_SetSavePoint(savePointId: 51)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 151, animationId: GlobalVars[1404], characterId: 8, line: StringRef(16))	; [name]比企谷小町[line]「明けましておめでとうございまーす！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 52)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 167, animationId: GlobalVars[1402], characterId: 4, line: StringRef(17))	; [name]由比ヶ浜結衣[line]「うんっ！ あけおめ！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 53)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 178, animationId: GlobalVars[1401], characterId: 2, line: StringRef(18))	; [name]雪ノ下雪乃[line]「明けましておめでとう」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 54)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(19))	; [name]比企谷八幡[line]（こいつら一緒に来たのか。新年から仲いいな）[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 55)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 127, animationId: GlobalVars[1400], characterId: 0, line: StringRef(20))	; [name]比企谷八幡[line]「おめでとさん。もうお参り済ませたのか」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 66082, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 66192, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(56))
+	MesSetID_SetSavePoint(savePointId: 57)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 179, animationId: GlobalVars[1401], characterId: 2, line: StringRef(21))	; [name]雪ノ下雪乃[line]「ええ。あなた達はこれからなのね」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 65782, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(58))
+	MesSetID_SetSavePoint(savePointId: 59)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 152, animationId: GlobalVars[1404], characterId: 8, line: StringRef(22))	; [name]比企谷小町[line]「そうなんです！ 合格祈願もかねて！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131622, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(60))
+	MesSetID_SetSavePoint(savePointId: 61)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 168, animationId: GlobalVars[1402], characterId: 4, line: StringRef(23))	; [name]由比ヶ浜結衣[line]「そっかぁ、試験もうすぐだもんね。あたしも受験の時、ここでお参りしたよー」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 62)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 128, animationId: GlobalVars[1400], characterId: 0, line: StringRef(24))	; [name]比企谷八幡[line]「そう聞くと、すげぇご利益ありそうだな。小町、これなら余裕で合格できそうだぞ」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 459298, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(63))
+	MesSetID_SetSavePoint(savePointId: 64)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 169, animationId: GlobalVars[1402], characterId: 4, line: StringRef(25))	; [name]由比ヶ浜結衣[line]「ひどい言われようだ！？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 131728, unused: 2832)
+	CallFar(target: FarLabelRef(6, 268), returnAddress: ReturnAddressRef(65))
+	MesSetID_SetSavePoint(savePointId: 66)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 180, animationId: GlobalVars[1401], characterId: 2, line: StringRef(26))	; [name]雪ノ下雪乃[line]「けれど、それほどご利益があるなら、比企谷君も人間性の改善をお願いしてくると良さそうね。今すぐお参りするべきだわ」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 393766, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(67))
+	MesSetID_SetSavePoint(savePointId: 68)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 170, animationId: GlobalVars[1402], characterId: 4, line: StringRef(27))	; [name]由比ヶ浜結衣[line]「そこまでのご利益はないよ！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 69)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 129, animationId: GlobalVars[1400], characterId: 0, line: StringRef(28))	; [name]比企谷八幡[line]「ちょっと？ 俺の人間性、君の学力より絶望的なの？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 327926, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(70))
+	MesSetID_SetSavePoint(savePointId: 71)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 153, animationId: GlobalVars[1404], characterId: 8, line: StringRef(29))	; [name]比企谷小町[line]「すいません。こんな兄ですが、今年も小町ともどもよろしくお願いします」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 72)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 181, animationId: GlobalVars[1401], characterId: 2, line: StringRef(30))	; [name]雪ノ下雪乃[line]「ええ。こちらこそよろしく」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131622, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(73))
+	MesSetID_SetSavePoint(savePointId: 74)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 171, animationId: GlobalVars[1402], characterId: 4, line: StringRef(31))	; [name]由比ヶ浜結衣[line]「うんっ。よろしくねー！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 75)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 130, animationId: GlobalVars[1400], characterId: 0, line: StringRef(32))	; [name]比企谷八幡[line]「じゃあ、行くか」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 65780, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(76))
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 131318, unused: 2832)
+	CallFar(target: FarLabelRef(6, 445), returnAddress: ReturnAddressRef(77))
+	AutoSave_FF
+	AutoSave_SaveState(checkpointId: 78)
+	AutoSave_05
+	SetFlag(flag: FlagRef(1288))
+	SetFlag(flag: FlagRef(457))
+	SetFlag(flag: FlagRef(458))
+	CreateThread(threadId: 5, entrypoint: FarLabelRef(3, 9))
+	MesSetID_SetSavePoint(savePointId: 79)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 154, animationId: GlobalVars[1404], characterId: 8, line: StringRef(33))	; [name]比企谷小町[line]「うん！ では、雪乃さん、結衣さん、また今度！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(457))
+	FlagOnWait(condition: 1, flag: FlagRef(458))
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(80))
+	MesSetID_SetSavePoint(savePointId: 81)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(34))	; 大きく手を振る由比ヶ浜と控えめに手を振る雪ノ下。二人に見送られながら俺と小町は参道を進んでいった。[%p]
+	MesMain_DisplayDialogue
+	MessWindow_Hide(messWindowId: 0)
+	MessWindow_AwaitHideCurrent
+	GlobalVars[2191] = 32
+	SEstop(channel: 1)
+	GlobalVars[2190] = 32
+	BGMstop(zero: 0)
+	CallFar(target: FarLabelRef(6, 757), returnAddress: ReturnAddressRef(82))
+	CallFar(target: FarLabelRef(6, 45), returnAddress: ReturnAddressRef(83))
+	GlobalVars[38] = 129
+	CallFar(target: FarLabelRef(6, 1537), returnAddress: ReturnAddressRef(84))
+	Mwait(delay: 64, unused: 0)
+	BGMplay(loop: 1, track: 4)
+	CallFar(target: FarLabelRef(6, 791), returnAddress: ReturnAddressRef(85))
+	SEplay(channel: 0, type: 0, effect: 141, loop: 0)
+	CallFar(target: FarLabelRef(6, 980), returnAddress: ReturnAddressRef(86))
+	SEplay(channel: 0, type: 0, effect: 142, loop: 0)
+	CallFar(target: FarLabelRef(6, 980), returnAddress: ReturnAddressRef(87))
+	MesSetID_SetSavePoint(savePointId: 88)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(35))	; もうしばらく待たされ、ようやく小町と一緒に神前に向かう。俺が祈ったのは、もちろん小町の受験合格のことだ。[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 89)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 155, animationId: GlobalVars[1404], characterId: 8, line: StringRef(36))	; [name]比企谷小町[line]「小町が受験合格しますように。あと兄が幸せになりますように！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 90)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 131, animationId: GlobalVars[1400], characterId: 0, line: StringRef(37))	; [name]比企谷八幡[line]「小町。願い事は口に出さなくてもいいんだぞ。それに、俺はだいたいいつも幸せだ」[%p]
+	MesMain_DisplayDialogue
+	GlobalVars[2191] = 8
+	SEstop(channel: 0)
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(91))
+	CHAload(type: 0, bufferId: 16, spriteId: 458996, unused: 2832)
+	GlobalVars[5260] = 480
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(92))
+	MesSetID_SetSavePoint(savePointId: 93)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 156, animationId: GlobalVars[1404], characterId: 8, line: StringRef(38))	; [name]比企谷小町[line]「どこが？」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 94)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 132, animationId: GlobalVars[1400], characterId: 0, line: StringRef(39))	; [name]比企谷八幡[line]「幸せはいつだって自分の心が決めるんだよなぁ、はちまん」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 65780, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(95))
+	MesSetID_SetSavePoint(savePointId: 96)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 157, animationId: GlobalVars[1404], characterId: 8, line: StringRef(40))	; [name]比企谷小町[line]「うん、お兄ちゃんのそれは諦めとか妥協だと思うけど。でも、小町はお兄ちゃんにはもっとちゃんと幸せになってほしいんだよ」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 97)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 133, animationId: GlobalVars[1400], characterId: 0, line: StringRef(41))	; [name]比企谷八幡[line]「小町」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131316, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(98))
+	MesSetID_SetSavePoint(savePointId: 99)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 158, animationId: GlobalVars[1404], characterId: 8, line: StringRef(42))	; [name]比企谷小町[line]「なーんて、今の小町的にポイント高い！ お兄ちゃんから貰えるお年玉の額も高い！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 100)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 134, animationId: GlobalVars[1400], characterId: 0, line: StringRef(43))	; [name]比企谷八幡[line]「高くない高くない。高くないけどいくらほしいの？ お兄ちゃん、お賽銭用の小銭しかお金持ってないんだけど」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 196854, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(101))
+	MesSetID_SetSavePoint(savePointId: 102)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 159, animationId: GlobalVars[1404], characterId: 8, line: StringRef(44))	; [name]比企谷小町[line]「ちっ、小銭か」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 103)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 135, animationId: GlobalVars[1400], characterId: 0, line: StringRef(45))	; [name]比企谷八幡[line]「ちょっと？ 今本気で舌打ちしなかった？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 65780, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(104))
+	MesSetID_SetSavePoint(savePointId: 105)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 160, animationId: GlobalVars[1404], characterId: 8, line: StringRef(46))	; [name]比企谷小町[line]「してないしてない。ほら、早くお参り済ませて」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 106)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 136, animationId: GlobalVars[1400], characterId: 0, line: StringRef(47))	; [name]比企谷八幡[line]「はいよ」[%p]
+	MesMain_DisplayDialogue
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(107))
+	MesSetID_SetSavePoint(savePointId: 108)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(48))	; そんなバカバカしい、兄妹なりの照れ隠し。まったくもう、小町ったら可愛いんだから！ 神様、どうかこの素晴らしい世界の妹にありったけの幸福を[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(109))
+	CHAload(type: 0, bufferId: 16, spriteId: 65780, unused: 2832)
+	GlobalVars[5260] = 480
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(110))
+	MesSetID_SetSavePoint(savePointId: 111)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 137, animationId: GlobalVars[1400], characterId: 0, line: StringRef(49))	; [name]比企谷八幡[line]「よし、後がつかえてるみたいだし、そろそろ行くぞ」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131316, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(112))
+	MesSetID_SetSavePoint(savePointId: 113)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 161, animationId: GlobalVars[1404], characterId: 8, line: StringRef(50))	; [name]比企谷小町[line]「うん！」[%p]
+	MesMain_DisplayDialogue
+	MessWindow_Hide(messWindowId: 0)
+	MessWindow_AwaitHideCurrent
+	CallFar(target: FarLabelRef(6, 757), returnAddress: ReturnAddressRef(114))
+	CallFar(target: FarLabelRef(6, 45), returnAddress: ReturnAddressRef(115))
+	GlobalVars[38] = 63
+	CallFar(target: FarLabelRef(6, 1537), returnAddress: ReturnAddressRef(116))
+	ResetFlag(flag: FlagRef(2414))
+	CallFar(target: FarLabelRef(6, 102), returnAddress: ReturnAddressRef(117))
+	CHAload(type: 0, bufferId: 16, spriteId: 66082, unused: 2832)
+	GlobalVars[5260] = 180
+	CallFar(target: FarLabelRef(6, 259), returnAddress: ReturnAddressRef(118))
+	ResetFlag(flag: FlagRef(2415))
+	CallFar(target: FarLabelRef(6, 103), returnAddress: ReturnAddressRef(119))
+	CHAload(type: 0, bufferId: 32, spriteId: 65760, unused: 2832)
+	GlobalVars[5300] = 780
+	CallFar(target: FarLabelRef(6, 263), returnAddress: ReturnAddressRef(120))
+	ResetFlag(flag: FlagRef(2416))
+	CallFar(target: FarLabelRef(6, 104), returnAddress: ReturnAddressRef(121))
+	CHAload(type: 0, bufferId: 64, spriteId: 66192, unused: 2832)
+	GlobalVars[5340] = 360
+	CallFar(target: FarLabelRef(6, 267), returnAddress: ReturnAddressRef(122))
+	Mwait(delay: 32, unused: 0)
+	CallFar(target: FarLabelRef(6, 791), returnAddress: ReturnAddressRef(123))
+	MesSetID_SetSavePoint(savePointId: 124)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 172, animationId: GlobalVars[1402], characterId: 4, line: StringRef(51))	; [name]由比ヶ浜結衣[line]「あ、ヒッキーと小町ちゃん！ お参り終わった？」[%p]
+	MesMain_DisplayDialogue
+	CallFar(target: FarLabelRef(6, 333), returnAddress: ReturnAddressRef(125))
+	ResetFlag(flag: FlagRef(2415))
+	CallFar(target: FarLabelRef(6, 103), returnAddress: ReturnAddressRef(126))
+	CHAload(type: 0, bufferId: 32, spriteId: 131318, unused: 2832)
+	GlobalVars[5300] = 747
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(127))
+	MesSetID_SetSavePoint(savePointId: 128)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 162, animationId: GlobalVars[1404], characterId: 8, line: StringRef(52))	; [name]比企谷小町[line]「終わりましたー！」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 129)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 138, animationId: GlobalVars[1400], characterId: 0, line: StringRef(53))	; [name]比企谷八幡[line]「お前ら、わざわざ待ってたのか」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 393762, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 721552, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(130))
+	MesSetID_SetSavePoint(savePointId: 131)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 182, animationId: GlobalVars[1401], characterId: 2, line: StringRef(54))	; [name]雪ノ下雪乃[line]「ええ。まあ」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 132)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 173, animationId: GlobalVars[1402], characterId: 4, line: StringRef(55))	; [name]由比ヶ浜結衣[line]「せっかく会ったんだし、あそこで別れるのもなんかなーって」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 133)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 139, animationId: GlobalVars[1400], characterId: 0, line: StringRef(56))	; [name]比企谷八幡[line]「そうか」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 65782, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(134))
+	MesSetID_SetSavePoint(savePointId: 135)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 163, animationId: GlobalVars[1404], characterId: 8, line: StringRef(57))	; [name]比企谷小町[line]「やっぱり雪乃さんと結衣さん優しいなあ。小町嬉しいです！」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 131622, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 66192, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(136))
+	MesSetID_SetSavePoint(savePointId: 137)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 174, animationId: GlobalVars[1402], characterId: 4, line: StringRef(58))	; [name]由比ヶ浜結衣[line]「ううん、あたしもゆきのんももうちょっと小町ちゃんと話したいなーと思ってたし」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 138)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(59))	; [name]比企谷八幡[line]（さて、人も増えてきたようだしどうするか。わざわざ待っててもらったわけだしなぁ）[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 139)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 140, animationId: GlobalVars[1400], characterId: 0, line: StringRef(60))	; [name]比企谷八幡[line]「お前らこれからどうすんの？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 66082, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 918160, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(140))
+	MesSetID_SetSavePoint(savePointId: 141)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 183, animationId: GlobalVars[1401], characterId: 2, line: StringRef(61))	; [name]雪ノ下雪乃[line]「そうね」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 142)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 175, animationId: GlobalVars[1402], characterId: 4, line: StringRef(62))	; [name]由比ヶ浜結衣[line]「ヒッキーと小町ちゃんは？ これから用事あったりする？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 65780, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(143))
+
+#label3_4368:
+	MesSetID_SetSavePoint(savePointId: 144)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 141, animationId: GlobalVars[1400], characterId: 0, line: StringRef(63))	; [name]比企谷八幡[line]「そうだな」[tok-0005]
+	MesMain_DisplayDialogue
+	Sel(type: 0, arg1: StringRef(145), arg2: 0)
+	Sel(type: 1, arg1: StringRef(64))	; ひとまず離れよう
+	Sel(type: 1, arg1: StringRef(65))	; 小町どうした？
+	Select(type: 0)
+	Save(arg: 46)
+	Save(arg: 47)
+	Save(arg: 40)
+	Save(arg: 41)
+	Select(type: 1)
+	Select(type: 2, arg1: 4318)
+	JumpTable(index: GlobalVars[4318], jumpTable: LocalLabelRef(4))
+	End
+	__Unrecognized__(data: 00)
+
+#label4_4460:
+	__Unrecognized__(data: 05 00 06 00)
+
+#label5_4464:
+	SEplay(channel: 1, type: 0, effect: 179, loop: 1)
+	MesSetID_SetSavePoint(savePointId: 146)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(66))	; 正直このままここに長く留まりたくない。早くも人当たりしそうだ。[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 147)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 142, animationId: GlobalVars[1400], characterId: 0, line: StringRef(67))	; [name]比企谷八幡[line]「ひとまずここ離れるか。人増えてる気がするし」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 393762, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 393872, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(148))
+	MesSetID_SetSavePoint(savePointId: 149)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 176, animationId: GlobalVars[1402], characterId: 4, line: StringRef(68))	; [name]由比ヶ浜結衣[line]「確かに！ お参りの列もすごいことになってるもんね」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 150)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 184, animationId: GlobalVars[1401], characterId: 2, line: StringRef(69))	; [name]雪ノ下雪乃[line]「あれでは参詣を終えるまでに疲れ切ってしまいそうね」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 66082, unused: 2832)
+	CallFar(target: FarLabelRef(6, 260), returnAddress: ReturnAddressRef(151))
+	MesSetID_SetSavePoint(savePointId: 152)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 177, animationId: GlobalVars[1402], characterId: 4, line: StringRef(70))	; [name]由比ヶ浜結衣[line]「じゃ、とりあえず行こっか！」[%p]
+	MesMain_DisplayDialogue
+	CallFar(target: FarLabelRef(6, 385), returnAddress: ReturnAddressRef(153))
+	MesSetID_SetSavePoint(savePointId: 154)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(71))	; 俺たちは満場一致で境内を離れ、ひとまず参道に向かうことにした。[%p]
+	MesMain_DisplayDialogue
+	GlobalVars[1023] = 35
+	CallFar(target: FarLabelRef(7, 33), returnAddress: ReturnAddressRef(155))
+	MessWindow_Hide(messWindowId: 0)
+	MessWindow_AwaitHideCurrent
+	GlobalVars[2191] = 32
+	SEstop(channel: 1)
+	GlobalVars[2190] = 32
+	BGMstop(zero: 0)
+	CallFar(target: FarLabelRef(6, 757), returnAddress: ReturnAddressRef(156))
+	CallFar(target: FarLabelRef(6, 45), returnAddress: ReturnAddressRef(157))
+	CallFar(target: FarLabelRef(6, 47), returnAddress: ReturnAddressRef(158))
+	CallFar(target: FarLabelRef(6, 801), returnAddress: ReturnAddressRef(159))
+	CallFar(target: FarLabelRef(7, 2), returnAddress: ReturnAddressRef(160))
+	Jump(target: LocalLabelRef(7))
+
+#label6_4855:
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 458998, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(161))
+	MesSetID_SetSavePoint(savePointId: 162)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 164, animationId: GlobalVars[1404], characterId: 8, line: StringRef(72))	; [name]比企谷小町[line]「あ」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2414))
+	CHAload(type: 0, bufferId: 16, spriteId: 459302, unused: 2832)
+	ResetFlag(flag: FlagRef(2416))
+	CHAload(type: 0, bufferId: 64, spriteId: 459408, unused: 2832)
+	CallFar(target: FarLabelRef(6, 280), returnAddress: ReturnAddressRef(163))
+	MesSetID_SetSavePoint(savePointId: 164)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(73))	; ふと見ると、小町があちこちきょろきょろと見回している。参道の両側びっしりと屋台が出ているので、それが気になるのかもしれない。[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 165)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 143, animationId: GlobalVars[1400], characterId: 0, line: StringRef(74))	; [name]比企谷八幡[line]「ん？ 小町どうした？」[%p]
+	MesMain_DisplayDialogue
+	ResetFlag(flag: FlagRef(2415))
+	CHAload(type: 0, bufferId: 32, spriteId: 65780, unused: 2832)
+	CallFar(target: FarLabelRef(6, 264), returnAddress: ReturnAddressRef(166))
+	MesSetID_SetSavePoint(savePointId: 167)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadVoicedDialogue(audioId: 165, animationId: GlobalVars[1404], characterId: 8, line: StringRef(75))	; [name]比企谷小町[line]「うん。あのねなんかあっちの方に」[%p]
+	MesMain_DisplayDialogue
+	MesSetID_SetSavePoint(savePointId: 168)
+	MessWindow_ShowCurrent
+	MessWindow_AwaitShowCurrent
+	MesVoiceWait
+	Mes_LoadDialogue(characterId: 0, line: StringRef(76))	; [name]比企谷八幡[line]（屋台じゃねぇのか。じゃあ何をきょろきょろしてるんだ？）[%p]
+	MesMain_DisplayDialogue
+	CallFar(target: FarLabelRef(7, 33), returnAddress: ReturnAddressRef(169))
+	GlobalVars[1023] = 28
+	Jump(target: LocalLabelRef(7))
+
+#label7_5137:
+	Return
+
+#label8_5139:
+	CallFar(target: FarLabelRef(6, 1055), returnAddress: ReturnAddressRef(170))
+	ThreadVars[47] = 120
+	CallFar(target: FarLabelRef(6, 1066), returnAddress: ReturnAddressRef(171))
+	GlobalVars[1022] = 8
+	CallFar(target: FarLabelRef(6, 258), returnAddress: ReturnAddressRef(172))
+	ResetFlag(flag: FlagRef(458))
+	End
+
+#label9_5197:
+	CallFar(target: FarLabelRef(6, 1055), returnAddress: ReturnAddressRef(173))
+	ThreadVars[47] = 42
+	CallFar(target: FarLabelRef(6, 1066), returnAddress: ReturnAddressRef(174))
+	GlobalVars[1022] = 16
+	CallFar(target: FarLabelRef(6, 262), returnAddress: ReturnAddressRef(175))
+	ResetFlag(flag: FlagRef(458))
+	End
+
+#label10_5256:
+	CallFar(target: FarLabelRef(6, 1055), returnAddress: ReturnAddressRef(176))
+	ThreadVars[47] = 408
+	CallFar(target: FarLabelRef(6, 1066), returnAddress: ReturnAddressRef(177))
+	GlobalVars[1022] = 8
+	CallFar(target: FarLabelRef(6, 258), returnAddress: ReturnAddressRef(178))
+	ResetFlag(flag: FlagRef(458))
+	End
+
+#label11_5314:
+	CallFar(target: FarLabelRef(6, 1055), returnAddress: ReturnAddressRef(179))
+	ThreadVars[47] = 276
+	CallFar(target: FarLabelRef(6, 1066), returnAddress: ReturnAddressRef(180))
+	GlobalVars[1022] = 4
+	CallFar(target: FarLabelRef(6, 258), returnAddress: ReturnAddressRef(181))
+	ResetFlag(flag: FlagRef(458))
+	End

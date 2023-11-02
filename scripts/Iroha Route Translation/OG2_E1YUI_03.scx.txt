@@ -1,0 +1,15 @@
+今来たとこ
+いや、まあ、別に
+(I waited quite a while.) 結構待つたな
+
+(I waited quite a while.)
+[name]Hachiman[line] "I waited quite a while."
+[name]Yui[line] "I-I'm sorry..."
+[name]Hachiman[line] "Eh, it's cause I came out earlier too..."
+"I was just stating the truth... And seeing how she ran with her cheeks red. I'm starting to get a bit embarrassed."
+[name]Yui[line] "I see... E-Erm, I was up early choosing my clothes and getting my make-up ready, was having a hard time choosing. That's why..."
+[name]Hachiman[line] "Ahh, it's okay, it's okay. I understand."
+[name]Hachiman[line] "(The two of us are going to buy a present together... The two of us??)"
+[name]Yui[line] "Hora~ let's go."
+[name]Hachiman[line] "uh, yeah..."
+[name]Hachiman[line] "(... Somehow I'm really nervous.)"

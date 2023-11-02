@@ -1,0 +1,11 @@
+(Let's stop ata a cafe) 喫茶店でひと休み
+とりあえず外に出る
+
+(Let's stop ata a cafe)
+[name]Hachiman[line] "Okay... Let's go to some cafe and rest..."
+[name]Yui[line] "Somewhere less crowded...? I wonder if there is~?"
+[name]Hachiman[line] "If not we'll just go home. Then we wouldn't have to spend more money either."
+[name]Yui[line] "You're suddenly so economical? Don't say that, let's just try and find one!"
+[name]Hachiman[line] "(... She's right.)"
+[name]Hachiman[line] "I don't know if it's less crowded, but I can think of one place though..."
+[name]Yui[line] "Eh. Really? Then let's go!"

@@ -1,0 +1,31 @@
+気晴らしに連れ出すか
+差し入れ買ってくるか
+(Let's encourage her a bit) 少し励ますか
+
+(Let's encourage her a bit)
+[name]Hachiman[line] "Well, if someone like me managed to do it, you would be fine, Komachi."
+[name]Komachi[line] "Komachi knows... Actually onii-chan is really good at studying..."
+[name]Hachiman[line] "Well, as long as it's not math..."
+[name]Komachi[line] "Hmph, it's annoying to have someone good at studying to tell me I'll be able to do it."
+[name]Hachiman[line] "Aww, your onii-chan don't get compliments this often."
+[name]Komachi[line] "That wasn't really a compliment..."
+[name]Hachiman[line] "It seems Komachi-chan is getting tired, your voice and even your eyes are turning dead."
+[name]Komachi[line] "I was imitating onii-chan..."
+[name]Hachiman[line] "It wasn't similar at all..."
+[name]Hachiman[line] "Well, you don't have to worry that much about your future, if it's just you I should be able to think of something."
+[name]Komachi[line] "Onii-chan..."
+[name]Hachiman[line] "It shouldn't make a difference if it's just 1 or 2 people, I'll ask mom and dad for you."
+[name]Komachi[line] "I really wanted to hear "I'll go to work" here..."
+"Komachi slowly rubbed her eyes and smiled while she said that."
+[name]Hachiman[line] "That will be my last resort... It may mean nothing coming from me, but your onii-chan is pretty good, I should be able to solve most problems if they come up... that's why, don't worry."
+"I raised my hand and patted Komachi on the head."
+[name]Komachi[line] "You know, onii-chan, when Komachi looks at you.."
+"Komachi put her hand on mine and stared at me with moist eyes. Almost as if she'd sigh if she stops talking."
+[name]Komachi[line] "It's annoying, I feel so silly..."
+"Then, she threw my hand."
+[name]Hachiman[line] "...That's good."
+[name]Hachiman[line] "(This sister of mine, she's kind that way... No, should I say that's her cute point? But it's very different from what onii-chan thinks is cute~?)"
+[name]Komachi[line] "Hah, that's it, back to studying then."
+"Komachi stood up from her chair and headed to her room like usual, however, before she went back she stopped."
+[name]Komachi[line] "...Thank you."
+"Just saying that, she rushed to close the door behind her. You could hear her footsteps that appear more rushed than usual."

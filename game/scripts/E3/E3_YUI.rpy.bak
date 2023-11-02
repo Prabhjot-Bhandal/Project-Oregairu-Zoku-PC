@@ -1,0 +1,925 @@
+label E3_YUI_01:
+    voice "audio/voice/E3/YUI/01/YI/YI000.ogg"
+    yui "I'm worried about Yukinon..."
+    voice "audio/voice/E3/YUI/01/HA/HA000.ogg"
+    hachiman "Mhm..."
+    "Suddenly, I was reminded of the incident in middle school... Regarding Orimoto..."
+    hachiman "(The rumours of the confession and both of us being together, the ones affected feel really bad...)"
+    voice "audio/voice/E3/YUI/01/YI/YI001.ogg"
+    yui "Hikki~, what are you thinking about?"
+    voice "audio/voice/E3/YUI/01/HA/HA001.ogg"
+    hachiman "Eh? No, it's nothing."
+    hide yui with dissolve
+    stop music fadeout 0.5
+    call card_loading from _call_card_loading_2
+    scene hallwayA
+    show yui school mid_center pout
+    $card_queue = ["About\nromance", "About the\nnew semester", "Career\npath", "About the\nYukinoshita and\nHayama rumours", "About\nHayama's group", "Cut the\nconversation\nshort"]
+    play music "audio/bgm/BGM31.ogg"
+    $yui_school_card_count = 0
+    $yui_school_ellipses = 0
+    jump yui_school_cards
+
+label yui_school_cards:
+    if yui_school_card_count < 5:
+        $yui_school_card_count += 1
+        $renpy.pause(delay=0.5, hard=True)
+        $ch2 = card_queue[renpy.random.randint(0, len(card_queue)-1)]
+        $card_queue.remove(ch2)
+        $ch3 = card_queue[renpy.random.randint(0, len(card_queue)-1)]
+        $card_queue.remove(ch3)
+        window auto hide dissolve
+        call screen three_minigame("...", ch2, ch3) with dissolve
+        if _return == 1:
+            "not done"
+            $card_queue.append(ch2)
+            $card_queue.append(ch3)
+            $yui_school_card_count -= 1
+            jump yui_school_cards
+        elif _return == 2:
+            $card_queue.append(ch3)
+            if ch2 == "About\nromance":
+                jump romance_card
+            elif ch2 == "About the\nnew semester":
+                jump new_semester_card
+            elif ch2 == "Career\npath":
+                jump career_path_card
+            elif ch2 == "About the\nYukinoshita and\nHayama rumours":
+                jump rumours_card
+            elif ch2 == "About\nHayama's group":
+                jump hayama_group_card
+            else:
+                "not done"
+                $card_queue.append(ch2)
+                $yui_school_card_count -= 1
+                jump yui_school_cards
+        elif _return == 3:
+            $card_queue.append(ch2)
+            if ch3 == "About\nromance":
+                jump romance_card
+            elif ch3 == "About the\nnew semester":
+                jump new_semester_card
+            elif ch3 == "Career\npath":
+                jump career_path_card
+            elif ch3 == "About the\nYukinoshita and\nHayama rumours":
+                jump rumours_card
+            elif ch3 == "About\nHayama's group":
+                jump hayama_group_card
+            else:
+                "not done"
+                $card_queue.append(ch3)
+                $yui_school_card_count -= 1
+                jump yui_school_cards
+    else:
+        jump extendedyuihallway
+
+label new_semester_card:
+    voice "audio/voice/E3/YUI/01/HA/HA032.ogg"
+    hachiman "... Ever since the new semester started, it feels like a lot of troublesome things have been going on, huh?"
+    voice "audio/voice/E3/YUI/01/YI/YI039.ogg"
+    yui "Yeah..."
+    voice "audio/voice/E3/YUI/01/HA/HA033.ogg"
+    hachiman "For example..."
+    show yui school mid_center surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI040.ogg"
+    yui "No, you don't have to tell me! It feels like I already know what you're gonna say..."
+    show yui school mid_center angry with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI041.ogg"
+    yui "Hikki~, it seems like you're spending a lot of effort in considering your preferred study path."
+    hachiman "(How did you know!?)"
+    jump yui_school_cards
+
+label career_path_card:
+    voice "audio/voice/E3/YUI/01/HA/HA027.ogg"
+    hachiman "Oh yeah... The career path..."
+    show yui school mid_left surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI033.ogg"
+    yui "Eh?"
+    voice "audio/voice/E3/YUI/01/HA/HA028.ogg"
+    hachiman "Have you decided what path to take?"
+    show yui school mid_center pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI034.ogg"
+    yui "Eto... I haven't really sat down and thought about it, but I'm not that smart, so the sciences are probably not an option... Hahaha..."
+    voice "audio/voice/E3/YUI/01/HA/HA029.ogg"
+    hachiman "You should apologize to all the Literature students now, you don't choose a field you're going to go into just cause your brain isn't good. Put the emphasis on choosing."
+    show yui school mid_center sad with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI035.ogg"
+    yui "Uuuu... I know that, but..."
+    voice "audio/voice/E3/YUI/01/YI/YI036.ogg"
+    yui "Oh yeah, Hikki~, your academics are actually pretty good..."
+    voice "audio/voice/E3/YUI/01/HA/HA030.ogg"
+    hachiman "No, actually..."
+    show yui school mid_center happy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI037.ogg"
+    yui "We probably can't go to the same university..."
+    voice "audio/voice/E3/YUI/01/HA/HA031.ogg"
+    hachiman "...We don't really have to go to the same university right? Please think about it more."
+    show yui school mid_center pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI038.ogg"
+    yui "Oh..."
+    jump yui_school_cards
+
+label hayama_group_card:
+    voice "audio/voice/E3/YUI/01/HA/HA023.ogg"
+    hachiman "Like Yukinoshita... Hayama's group are also having a hard time because of the rumours, right?"
+    show yui school mid_center sad with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI029.ogg"
+    yui "You knew just by looking, right? Especially for Yumiko..."
+    voice "audio/voice/E3/YUI/01/HA/HA024.ogg"
+    hachiman "Yeah..."
+    voice "audio/voice/E3/YUI/01/YI/YI030.ogg"
+    yui "Hayato-kun was angry about it too... It was a bit scary."
+    voice "audio/voice/E3/YUI/01/HA/HA025.ogg"
+    hachiman "Is it?"
+    "It's rare for him to get angry, he probably thought about Yukinoshita and his family matter."
+    hachiman "(It's a delicate matter...)"
+    show yui school mid_center happy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI031.ogg"
+    yui "But for Hikki to worry about Hayato's group, that's rare isn't it?"
+    voice "audio/voice/E3/YUI/01/HA/HA026.ogg"
+    hachiman "It's not worrying about them, it's just that I thought you might be feeling uncomfortable."
+    show yui school mid_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI032.ogg"
+    yui "...! It's not like that...! Heheheheh..."
+    hachiman "(Maybe I thought wrong...)"
+    jump yui_school_cards
+
+label romance_card:
+    voice "audio/voice/E3/YUI/01/HA/HA018.ogg"
+    hachiman "Romance... Seems troublesome, huh..."
+    show yui school mid_left surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI023.ogg"
+    yui "Troublesome!?"
+    voice "audio/voice/E3/YUI/01/HA/HA019.ogg"
+    hachiman "Nobody would want to go out with some one that they don't like, right?"
+    "Frankly, even if I'm unsure what Yukinoshita and Hayama think, looking as a bystander, they don't seem to have any romantic interest in one another."
+    "Even if they do, such rumours may stray from what they may have initially felt."
+    show yui school mid_center happy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI024.ogg"
+    yui "Ah, that's what you meant..."
+    voice "audio/voice/E3/YUI/01/HA/HA020.ogg"
+    hachiman "...?"
+    voice "audio/voice/E3/YUI/01/YI/YI025.ogg"
+    yui "So... , if it's someone you really like, it's okay?"
+    voice "audio/voice/E3/YUI/01/HA/HA021.ogg"
+    hachiman "... For me at least, but the other party will not like that they're involved with me right? No, even if it's just a rumour they'd hate it too... "
+    show yui school mid_center surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI026.ogg"
+    yui "It became a topic of hating the rumour instead!?"
+    show yui school mid_center pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI027.ogg"
+    yui "It probably... doesn't happen every time..."
+    voice "audio/voice/E3/YUI/01/HA/HA022.ogg"
+    hachiman "How can it not?"
+    show yui school mid_center surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI028.ogg"
+    yui "I didn't finish my sentence!?"
+    jump yui_school_cards
+
+label rumours_card:
+    voice "audio/voice/E3/YUI/01/HA/HA015.ogg"
+    hachiman "But, spreading rumours sure is irresponsible..."
+    show yui school mid_center pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI020.ogg"
+    yui "Yeah..."
+    voice "audio/voice/E3/YUI/01/HA/HA016.ogg"
+    hachiman "... This kind of thing is only enjoyed by the people unaffected. Plus, the person spreading the rumours don't feel a thing."
+    show yui school mid_center happy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI021.ogg"
+    yui "Definitely... Hikki really understands these things, huh?"
+    voice "audio/voice/E3/YUI/01/HA/HA017.ogg"
+    hachiman "...Well"
+    show yui school mid_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI022.ogg"
+    yui "Definitely, sometimes... you're pretty... amazing."
+    show yui school mid_left angry with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI054.ogg"
+    yui "Eto... Do you wanna head to club together later?"
+    voice "audio/voice/E3/YUI/01/HA/HA045.ogg"
+    hachiman "I'm okay with it."
+    show yui school mid_left surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI055.ogg"
+    yui "I see... ...Eh!?"
+    voice "audio/voice/E3/YUI/01/HA/HA046.ogg"
+    hachiman "What's wrong?"
+    show yui school mid_left pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI056.ogg"
+    yui "No... usually you'd say \"It's better for us to go separately\""
+    hachiman "(... I didn't really mean it when I replied... It was on a whim but, I'm bothered by it now!! Don't mention it!)"
+    voice "audio/voice/E3/YUI/01/HA/HA047.ogg"
+    hachiman "Ah... That... I'm sorry."
+    show yui school mid_center pout with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI057.ogg"
+    yui "Jya*... Let's go together?"
+    voice "audio/voice/E3/YUI/01/HA/HA048.ogg"
+    hachiman "... I'll wait for you in the hallway"
+    show yui school mid_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI058.ogg"
+    yui "UmU"
+    jump extendedyuihallway
+
+label extendedyuihallway:
+    stop music fadeout 1.0
+    scene hallwayA
+    show yui school mid_center pout
+    with Fade(1.0, 0.5, 1.0)
+    play music "audio/bgm/BGM46.ogg"
+    voice "audio/voice/E3/YUI/01/YI/YI059.ogg"
+    yui "These kind of rumours, even if they say they aren't bothered by it, they probably still are right?"
+    voice "audio/voice/E3/YUI/01/HA/HA049.ogg"
+    hachiman "Well... You can say that."
+    show yui school mid_center sad with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI060.ogg"
+    yui "But, we can only wait for the rumours to disappear by itself..."
+    hachiman "(That's Gahama-san for you, full of experience...)"
+    voice "audio/voice/E3/YUI/01/HA/HA050.ogg"
+    hachiman "... If it were you..."
+    show yui school mid_center surprised with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI061.ogg"
+    yui "Huh?"
+    voice "audio/voice/E3/YUI/01/HA/HA051.ogg"
+    hachiman "What would you do if there was a rumor like that about you?"
+    voice "audio/voice/E3/YUI/01/YI/YI062.ogg"
+    yui "W-Why are you asking so suddenly"
+    voice "audio/voice/E3/YUI/01/HA/HA052.ogg"
+    hachiman "Nah, I just wanted to ask."
+    show yui school mid_center happy with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI063.ogg"
+    yui "Let's see... I'd try confessing to someone I like!"
+    voice "audio/voice/E3/YUI/01/HA/HA053.ogg"
+    hachiman "For real?"
+    show yui school mid_center blush with dissolve
+    voice "audio/voice/E3/YUI/01/YI/YI064.ogg"
+    yui "Nah, how do I say this... I'm the kind of person that's easily swayed and since someone already started it for me. Ahahah..."
+    voice "audio/voice/E3/YUI/01/HA/HA054.ogg"
+    hachiman "You're quite open-minded, huh..."
+    hachiman "(But then, you'd need to have someone to confess to first.)"
+    voice "audio/voice/E3/YUI/01/YI/YI065.ogg"
+    yui "No, I mean... I'm not sure if I'm really decisive enough when it comes down to it, so I was wondering if you could give me that push. Tahaha...!"
+    stop music fadeout 1.0
+    jump E3_YUI_06
+
+label E3_YUI_06:
+    voice "audio/voice/E3/YUI/06/YI/YI001.ogg"
+    yui "Um... Yukinon probably isn't feeling well..."
+    voice "audio/voice/E3/YUI/06/HA/HA001.ogg"
+    hachiman "Well, we can't do anything about it now."
+    "That said, it's not like I don't understand her feelings. If it's just me, I'd hesitate too."
+    show yui school mid_center angry with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI002.ogg"
+    yui "Y-you're right... Yoshii~!"
+    scene clubroomB with wipeleft
+    play sound "audio/sfx/SE04/SE04_01.ogg"
+    show yui school mid_right vhappy at left with easeinleft
+    voice "audio/voice/E3/YUI/06/YI/YI003.ogg"
+    yui "Yahallo~! Yukinon!"
+    show yukino school mid_left happy at right with dissolve:
+        xoffset -100
+    play music "audio/bgm/BGM11.ogg"
+    voice "audio/voice/E3/YUI/06/YK/YK000.ogg"
+    yukino "Yuigahama-san... Hello."
+    voice "audio/voice/E3/YUI/06/HA/HA002.ogg"
+    hachiman "...Oh"
+    "She looks the same at first glance, but then, her expression looks more tired than usual."
+    show yui school mid_right happy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI009.ogg"
+    yui "Eto, once again... Happy Birthday!"
+    show yui school mid_center happy at left with dissolve:
+        xoffset 200
+    voice "audio/voice/E3/YUI/06/YI/YI010.ogg"
+    yui "...Horah* Hikki~ you too!"
+    show yukino school mid_left surprised at right with dissolve
+    voice "audio/voice/E3/YUI/06/HA/HA005.ogg"
+    hachiman "H-Happy Birthday."
+    show yui school mid_center vhappy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI011.ogg"
+    yui "Before, we didn't manage to celebrate it properly. So I wanted to do it again, so I talked with Hikki about it."
+    voice "audio/voice/E3/YUI/06/HA/HA006.ogg"
+    hachiman "Yeah, that's right."
+    voice "audio/voice/E3/YUI/06/YK/YK006.ogg"
+    yukino "Hikigaya-kun... Yuigahama-san... What should I say...?"
+    show yukino school mid_left vhappy at right with dissolve
+    voice "audio/voice/E3/YUI/06/YK/YK007.ogg"
+    yukino "Having someone celebrate it for me like this... It's the first time for me. So... Really... Thank you."
+    show yui school mid_right blush at left with dissolve:
+        xoffset -15
+    voice "audio/voice/E3/YUI/06/YI/YI012.ogg"
+    yui "Aww... Don't exaggerate, Yukinon!"
+    show yui school mid_right vhappy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI013.ogg"
+    yui "And, Ta-da! We have a cake too!"
+    show yui school mid_right happy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI014.ogg"
+    yui "We really wanted to celebrate your birthday, so we were looking forward to this!"
+    voice "audio/voice/E3/YUI/06/YK/YK008.ogg"
+    yukino "..."
+    show yui school mid_right sad at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI015.ogg"
+    yui "That's why..."
+    voice "audio/voice/E3/YUI/06/HA/HA007.ogg"
+    hachiman "..."
+    "Yuigahama should have noticed too, Yukinoshita looks happy but still seems apathetic."
+    "Despite knowing about the rumours, she pretends she doesn't... I'm doing it as well, but looking at her acting like that makes my heart ache a little."
+    show yukino school mid_left unimpressed at right with dissolve
+    voice "audio/voice/E3/YUI/06/YK/YK009.ogg"
+    yukino "...The rumours about Hayama-kun and me."
+    show yukino school mid_left vhappy at right with dissolve
+    voice "audio/voice/E3/YUI/06/YK/YK010.ogg"
+    yukino "...It's okay, I'm not bothered by them."
+    voice "audio/voice/E3/YUI/06/YI/YI016.ogg"
+    yui "But..."
+    voice "audio/voice/E3/YUI/06/YK/YK011.ogg"
+    yukino "If you're worried about me because of these rumours, I'll be fine. I've been through this before."
+    voice "audio/voice/E3/YUI/06/YI/YI019.ogg"
+    yui "Is that so..."
+    voice "audio/voice/E3/YUI/06/YK/YK012.ogg"
+    yukino "Also... As long as the people close to me understand... That's enough for me..."
+    "Yukinoshita gently smiled while saying so. I honestly thought that she wasn't lying..."
+    show yui school mid_right happy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI020.ogg"
+    yui "Yukinon..."
+    voice "audio/voice/E3/YUI/06/HA/HA008.ogg"
+    hachiman "...I see."
+    voice "audio/voice/E3/YUI/06/YK/YK013.ogg"
+    yukino "Also... As long as the people close to me understand... That's enough for me..."
+    voice "audio/voice/E3/YUI/06/YK/YK014.ogg"
+    yukino "Putting that aside, Yuigahama went to the trouble of bringing us this cake, so let's enjoy it. I'll make some tea to go along with it."
+    show yui school mid_right vhappy at left with dissolve
+    voice "audio/voice/E3/YUI/06/YI/YI021.ogg"
+    yui "UmU! Then I'll cut the cake!"
+    show yui school mid_center vhappy at left with dissolve:
+        xoffset 200
+    voice "audio/voice/E3/YUI/06/YI/YI022.ogg"
+    yui "Hikki~! Clear up the desk a bit~!"
+    hachiman "...Ma, I also don't want to talk about the rumours any further, let's leave it at that)."
+    voice "audio/voice/E3/YUI/06/HA/HA009.ogg"
+    hachiman "Sure."
+    hide yui with dissolve
+    hide yukino with dissolve
+    stop music fadeout 1.0
+    scene black with Fade(1.0, 0.5, 1.0)
+    jump E3_YUI_07
+
+label E3_YUI_07:
+    scene gatesC with Fade(1.0, 0.5, 1.0)
+    play music "audio/bgm/BGM42.ogg"
+    "Since winter started, once the sun sets, it gets dark pretty fast."
+    "As it gets dark earlier, the time to finish club activities is earlier as well. But Yuigahama still seemed uncomfortable about something and suddenly clasped her hands."
+    show yukino school mid_center happy at left with dissolve
+    show yui school mid_center vhappy at right with dissolve:
+        xoffset -100
+    voice "audio/voice/E3/YUI/07/YI/YI000.ogg"
+    yui "...Right! How about the 3 of us head home together after getting some tea?"
+    voice "audio/voice/E3/YUI/07/YK/YK000.ogg"
+    yukino "I don't really mind... But why?"
+    show yui school mid_left happy at right with dissolve
+    voice "audio/voice/E3/YUI/07/YI/YI001.ogg"
+    yui "Iya*, no special reason... just wanted to... along the way."
+    voice "audio/voice/E3/YUI/07/HA/HA000.ogg"
+    hachiman "...Sorry, I'll have to go home first. I need to buy something for Komachi."
+    voice "audio/voice/E3/YUI/07/YI/YI002.ogg"
+    yui "Really? ...Jya* How about you Yukinon?"
+    show yukino school mid_center vhappy at left with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK001.ogg"
+    yukino "I don't mind, I have no special plans for today."
+    show yui school mid_left vhappy at right with dissolve
+    voice "audio/voice/E3/YUI/07/YI/YI003.ogg"
+    yui "Yay~! Let's go!"
+    stop music fadeout 1.0
+    scene black with Fade(1.0, 0.5, 1.0)
+    hide yui
+    hide yukino
+    scene cafeCLoading with Fade(1.0, 2, 1.0)
+    $renpy.pause(delay=2.0, hard=True)
+    show yui school mid_right vhappy at center:
+        xoffset -345 yoffset 75 alpha 0
+        parallel:
+            linear 0.5 alpha 1.0
+        parallel:
+            easein 0.6 xoffset -465
+            easeout 1.0 xoffset -345
+    $renpy.pause(delay=3.0, hard=True)
+    scene cafeC with dissolve
+    show yukino school near_center happy with dissolve
+    play music "audio/bgm/BGM12.ogg"
+    voice "audio/voice/E3/YUI/07/YI/YI004.ogg"
+    yui "...Deneh*, once the teacher mentioned career paths, the atmosphere changed, everyone got excited~~"
+    voice "audio/voice/E3/YUI/07/YK/YK002.ogg"
+    yukino "Yeah. We're finally going to be 3rd year students. My class will also change, dividing the classes by academics probably?"
+    voice "audio/voice/E3/YUI/07/YI/YI005.ogg"
+    yui "Yeah, that's why everyone's talking about each others career choices."
+    show yukino school near_center surprised with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK003.ogg"
+    yukino "...Eh? Why?"
+    voice "audio/voice/E3/YUI/07/YI/YI006.ogg"
+    yui "Eh? Hora* Wouldn't everyone be concerned with which class they're going to be in?"
+    voice "audio/voice/E3/YUI/07/YK/YK004.ogg"
+    yukino "...Eh? Why?"
+    voice "audio/voice/E3/YUI/07/YI/YI007.ogg"
+    yui "...Eh? Hora* You know, wouldn't you be concerned who your classmates are going to be?"
+    show yukino school near_center pout with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK005.ogg"
+    yukino "...Is that so? For me, I'd just think about which path is the best for me."
+    voice "audio/voice/E3/YUI/07/YI/YI008.ogg"
+    yui ".....Ahahah. Really, huh?"
+    voice "audio/voice/E3/YUI/07/YI/YI009.ogg"
+    yui "Well, everyone if they could, would prefer to stay with people they're comfortable with, so..."
+    voice "audio/voice/E3/YUI/07/YI/YI010.ogg"
+    yui "The speculation around Hayato-kun's career choice is getting pretty intense, you know? Everyone wants to know if he'll choose the dciences or humanities."
+    yui "(... Oh no, I accidentally mentioned Hayato-kun...)"
+    voice "audio/voice/E3/YUI/07/YI/YI011.ogg"
+    yui "..."
+    show yukino school near_center concerned with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK006.ogg"
+    yui "..."
+    voice "audio/voice/E3/YUI/07/YI/YI012.ogg"
+    yui "... Actually, about those rumours... Yukinon, are you really okay with them?"
+    show yukino school near_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK007.ogg"
+    yukino "Yeah, I'm okay, really. So you don't have to be so bothered about it, in fact, isn't it better for Hayama-kun if you didn't mind it so much?"
+    voice "audio/voice/E3/YUI/07/YI/YI013.ogg"
+    yui "Speaking of Hayama-kun, he's quite impressive. Even if it's a baseless rumour, other people wouldn't take it as well as he did."
+    voice "audio/voice/E3/YUI/07/YI/YI014.ogg"
+    yui "...neh*, Yukinon do you have someone that you like?"
+    stop music fadeout 1.0
+    show yukino school near_center surprised with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK008.ogg"
+    yukino "...!"
+    yui "(...She became quiet. I thought she'd say \"no\". I didn't think she'd go quiet instead.)"
+    play music "audio/bgm/BGM11.ogg"
+    show yukino school near_center pout with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK009.ogg"
+    yukino "Ahem... Please don't ask such a strange question so suddenly... I couldn't collect my thoughts in time."
+    voice "audio/voice/E3/YUI/07/YI/YI015.ogg"
+    yui "Uuu... Sorry..."
+    show yukino school near_center avoid with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK010.ogg"
+    yukino "Erm, I'm not very good at.... this kind of topic..."
+    voice "audio/voice/E3/YUI/07/YI/YI016.ogg"
+    yui "Is... that so? Oh yeah, I've havent talked about romance with Yukinon yet right~?"
+    voice "audio/voice/E3/YUI/07/YI/YI017.ogg"
+    yui "Jya* Let's just say, what's your type then?"
+    show yukino school near_center blush with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK011.ogg"
+    yukino "My type..."
+    show yukino school near_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK012.ogg"
+    yukino "... Hmm yeah... if I were to be in a relationship... someone like you would be good..."
+    yui "(Is Yukinon for real?)"
+    voice "audio/voice/E3/YUI/07/YI/YI018.ogg"
+    yui "Eh~, Jya* Yukinon, why not go out with me then!?"
+    show yukino school near_center surprised with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK013.ogg"
+    yukino "Eh...?"
+    voice "audio/voice/E3/YUI/07/YI/YI019.ogg"
+    yui "Horah*, then the rumours would disappear too!"
+    yui "(Eh, what am I saying...?)"
+    show yukino school near_center annoyed with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK014.ogg"
+    yukino "... But, it seems like it'll just sprout other kinds of rumours instead..."
+    voice "audio/voice/E3/YUI/07/YI/YI020.ogg"
+    yui "Ah, you're right..."
+    show yukino school near_center vhappy with dissolve
+    voice "audio/voice/E3/YUI/07/YK/YK015.ogg"
+    yukino "... I'm kidding."
+    voice "audio/voice/E3/YUI/07/YI/YI021.ogg"
+    yui "Ahaha..."
+    yui "(Yokata* I managed to take back what I said.)"
+    yui "(... But, Yukinon's face earlier...)"
+    yui "(Someone that Yukinon likes...)"
+    window auto hide dissolve
+    stop voice
+    stop music fadeout 1.0
+    $renpy.pause(delay=0.5, hard=True)
+    scene loading_wlogo
+    show yui school mid_center pout at center:
+        xoffset -260 yoffset 75 alpha 1.0
+        on hide:
+            parallel:
+                1.3
+                linear 0.3 alpha 0
+            parallel:
+                easein 0.6 xoffset -200
+                easeout 1.0 xoffset -380
+    with Dissolve(1.0)
+    $renpy.pause(delay=2.0, hard=True)
+    hide yui
+    $renpy.pause(delay=3.0, hard=True)
+    jump E3_CMM_06
+
+label E3_YUI_08:
+    show yui school_sunset mid_left sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YI/YI000.ogg"
+    yui "Erm, so shall we go home first?"
+    show haruno sweater_sunset far_left vhappy at left with dissolve:
+        xoffset 250 yoffset 75
+    show yukino school_sunset far_center happy at left with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YK/YK000.ogg"
+    yukino "Y-Yes."
+    voice "audio/voice/E3/YUI/08/HR/HR000.ogg"
+    haruno "Bye, both of you~"
+    stop music fadeout 0.5
+    hide yukino
+    hide haruno
+    hide yui
+    play sound "audio/sfx/SE04/SE04_01.ogg"
+    play music "audio/bgm/BGM12.ogg"
+    scene hallwayB with wipeleft
+    show yui school_sunset mid_center sad at center with dissolve:
+        xoffset -300 yoffset 75 alpha 0
+        parallel:
+            easein 0.5 xoffset 0
+        parallel:
+            linear 0.5 alpha 1.0
+    $renpy.pause(delay=0.75,hard=True)
+    hide yui
+    show yui school_sunset mid_center sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YI/YI001.ogg"
+    yui "Was that okay?"
+    voice "audio/voice/E3/YUI/08/HA/HA000.ogg"
+    hachiman "...I also didn't know if I should've said anything."
+    voice "audio/voice/E3/YUI/08/YI/YI002.ogg"
+    yui "Although it's like that..."
+    show yui school_sunset mid_center surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YI/YI003.ogg"
+    yui "Ah! No good!"
+    voice "audio/voice/E3/YUI/08/HA/HA001.ogg"
+    hachiman "What's wrong?"
+    show yui school_sunset mid_left surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YI/YI004.ogg"
+    yui "I left my stuff in the discussion room! Can you... wait for me... at the gate?"
+    voice "audio/voice/E3/YUI/08/HA/HA002.ogg"
+    hachiman "If that's the case, we don't really have to head home together..."
+    show yui school_sunset mid_left angry at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/08/YI/YI005.ogg"
+    yui "Nono, I'll be real quick, just wait a bit!"
+    hide yui with dissolve
+    play sound "audio/sfx/SE00/SE00_00.ogg"
+    $renpy.pause(delay=2, hard=True)
+    voice "audio/voice/E3/YUI/08/YI/YI006.ogg"
+    yui "You definitely have to wait kay~!"
+    voice "audio/voice/E3/YUI/08/HA/HA003.ogg"
+    hachiman "Oii*, you didn't have to rush like that..."
+    stop music fadeout 1.0
+    $renpy.pause(delay=0.5, hard=True)
+    $totsukaTalkFlag = "yui"
+    jump E3_CMM_07
+
+label E3_YUI_09:
+    scene gatesB with dissolve
+    play ambient "audio/sfx/SE00/SE00_05.ogg"
+    $renpy.pause(delay=2, hard=True)
+    play music "audio/bgm/BGM12.ogg"
+    show yui school_sunset mid_center vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI000.ogg"
+    yui "Thanks for waiting~!"
+    voice "audio/voice/E3/YUI/09/HA/HA000.ogg"
+    hachiman "...Hey."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI001.ogg"
+    yui "...L-Let's go?"
+    voice "audio/voice/E3/YUI/09/HA/HA001.ogg"
+    hachiman "Yeah."
+    show yui school_sunset mid_center vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI002.ogg"
+    yui "If you answer like that it's a little weird, ahahah..."
+    voice "audio/voice/E3/YUI/09/HA/HA002.ogg"
+    hachiman "Y-Yeah, I guess so..."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI003.ogg"
+    yui "Hikki~... Do you want to walk ahead?"
+    voice "audio/voice/E3/YUI/09/HA/HA003.ogg"
+    hachiman "...No, either way is fine..."
+    hide yui
+    scene skyB with dissolve
+    play sound "audio/sfx/SE00/SE00_18L.ogg"
+    $renpy.pause(delay=2.5, hard=True)
+    voice "audio/voice/E3/YUI/09/YI/YI004.ogg"
+    yui "Definitely, once the sun sets it gets colder, huh..."
+    voice "audio/voice/E3/YUI/09/HA/HA004.ogg"
+    hachiman "...Yeah."
+    hachiman "(W-What's with this sour-sweet atmosphere...!?)"
+    stop ambient fadeout 1
+    scene sidewalkB with dissolve
+    show yui school_sunset mid_center sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI005.ogg"
+    yui "...I wonder why Haruno-san held Yukinon back..."
+    "It's not that I don't understand her feelings, but these are problems that we just can't solve."
+    "I didn't know what better to say, and ended up with a few cold words..."
+    voice "audio/voice/E3/YUI/09/HA/HA005.ogg"
+    hachiman "It's just between them sisters, we can't really interfere."
+    voice "audio/voice/E3/YUI/09/YI/YI006.ogg"
+    yui "Although it isn't a good atmosphere as it sounds~~..."
+    voice "audio/voice/E3/YUI/09/HA/HA006.ogg"
+    hachiman "Maa*, it's not like she's really trapped, if it's something she doesn't like, Yukinoshita can run away too."
+    voice "audio/voice/E3/YUI/09/YI/YI007.ogg"
+    yui "I see... Maybe you're right... This is really complicated, huh..."
+    hide yui with dissolve
+    stop music fadeout 0.5
+    call card_loading
+    scene sidewalkB with dissolve
+    show yui school_sunset mid_center pout at center with dissolve:
+        xoffset 0 yoffset 75
+    $card_queue = ["About\nfamily", "About\nYukino", "About\nsiblings", "About\nHaruno-san", "Sibling\nfights", "Cut the\nconversation\nshort"]
+    play music "audio/bgm/BGM31.ogg"
+    $E3_YUI_09_CARDS_COUNT = 0
+    $E3_YUI_09_CARDS_ELLIPSES = 0
+    jump E3_YUI_09_CARDS
+
+label E3_YUI_09_CARDS:
+    if E3_YUI_09_CARDS_COUNT < 5:
+        $E3_YUI_09_CARDS_COUNT += 1
+        $renpy.pause(delay=0.5, hard=True)
+        $ch2 = card_queue[renpy.random.randint(0, len(card_queue)-1)]
+        $card_queue.remove(ch2)
+        $ch3 = card_queue[renpy.random.randint(0, len(card_queue)-1)]
+        $card_queue.remove(ch3)
+        window auto hide dissolve
+        call screen three_minigame("...", ch2, ch3) with dissolve
+        if _return == 1:
+            "not done"
+            $card_queue.append(ch2)
+            $card_queue.append(ch3)
+            $E3_YUI_09_CARDS_COUNT -= 1
+            jump E3_YUI_09_CARDS
+        elif _return == 2:
+            $card_queue.append(ch3)
+            if ch2 == "About\nfamily":
+                jump family_card
+            elif ch2 == "About\nYukino":
+                jump yukino_card
+            elif ch2 == "About\nsiblings":
+                jump siblings_card
+            elif ch2 == "About\nHaruno-san":
+                jump haruno_card
+            elif ch2 == "Sibling\nfights":
+                jump fight_card
+            else:
+                jump E3_YUI_09_CONT
+                $card_queue.append(ch2)
+                $E3_YUI_09_CARDS_COUNT -= 1
+                jump E3_YUI_09_CARDS
+        elif _return == 3:
+            $card_queue.append(ch2)
+            if ch3 == "About\nfamily":
+                jump family_card
+            elif ch3 == "About\nYukino":
+                jump yukino_card
+            elif ch3 == "About\nsiblings":
+                jump siblings_card
+            elif ch3 == "About\nHaruno-san":
+                jump haruno_card
+            elif ch3 == "Sibling\nfights":
+                jump fight_card
+            else:
+                jump E3_YUI_09_CONT
+                $card_queue.append(ch3)
+                $E3_YUI_09_CARDS_COUNT -= 1
+                jump E3_YUI_09_CARDS
+    else:
+        jump E3_YUI_09_CONT
+
+
+label siblings_card:
+    voice "audio/voice/E3/YUI/09/HA/HA021.ogg"
+    hachiman "...There's different circumstances for siblings, huh?"
+    show yui school_sunset mid_right happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI025.ogg"
+    yui "Hikki~ you're really close to Komachi, neh*~~"
+    voice "audio/voice/E3/YUI/09/HA/HA022.ogg"
+    hachiman "Well that's... cause I'm a good brother..."
+    show yui school_sunset mid_right sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI026.ogg"
+    yui "Ahahahah..."
+    hachiman "(What's with the dry laugh?)"
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI027.ogg"
+    yui "But, I wonder how it'd feel to have Hikki~ as a brother?"
+    voice "audio/voice/E3/YUI/09/HA/HA023.ogg"
+    hachiman "For that... definitely... THE BEST. Basically, I'll listen to whatever you have to say."
+    show yui school_sunset mid_center surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI028.ogg"
+    yui "Isn't that a slave then!? But... Listen to whatever... Huh..."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    hachiman "(Eh. Why dd she smile so happily? What does she want me to do!?)"
+    jump E3_YUI_09_CARDS
+
+label haruno_card:
+    voice "audio/voice/E3/YUI/09/HA/HA024.ogg"
+    hachiman "...That person, you don't really know what she's thinking."
+    show yui school_sunset mid_left sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI029.ogg"
+    yui "Yeah... But, it feels like Hikki~, you can't calm down in front of her?"
+    voice "audio/voice/E3/YUI/09/HA/HA025.ogg"
+    hachiman "Isn't it cause I'm just being made fun of?"
+    show yui school_sunset mid_left happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI030.ogg"
+    yui "Hikki~... Do you like the Onee-san type?"
+    voice "audio/voice/E3/YUI/09/HA/HA026.ogg"
+    hachiman "That's a random question..."
+    show yui school_sunset mid_left blush at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI031.ogg"
+    yui "Well, since the topic came up..."
+    voice "audio/voice/E3/YUI/09/HA/HA027.ogg"
+    hachiman "...I should say that those kind of girls only scary to me, I'm an onii-chan after all."
+    show yui school_sunset mid_center vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI032.ogg"
+    yui "I-I see! That's true huh! Heheheheh..."
+    jump E3_YUI_09_CARDS
+
+label yukino_card:
+    voice "audio/voice/E3/YUI/09/HA/HA028.ogg"
+    hachiman "About Yukinoshita... Are you worried?"
+    show yui school_sunset mid_center pout at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI033.ogg"
+    yui "Umm... A little."
+    voice "audio/voice/E3/YUI/09/HA/HA029.ogg"
+    hachiman "...Then, maybe we should text her later..."
+    voice "audio/voice/E3/YUI/09/YI/YI034.ogg"
+    yui "UmU. You're right..."
+    voice "audio/voice/E3/YUI/09/HA/HA030.ogg"
+    hachiman "She probably doesn't text much either, right?"
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI035.ogg"
+    yui "But, she'll reply if you send her a text though. Although, it's short..."
+    hachiman "(So, she's really the same as me...)"
+    jump E3_YUI_09_CARDS
+
+label family_card:
+    voice "audio/voice/E3/YUI/09/HA/HA031.ogg"
+    hachiman "Speaking of family, how's yours?"
+    show yui school_sunset mid_left surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI036.ogg"
+    yui "Eh? My family? I don't have any siblings... But, it's normal, I guess?"
+    "Well normal as it is, for Yuigahama, she's definitely from a warm family, I would think."
+    voice "audio/voice/E3/YUI/09/HA/HA032.ogg"
+    hachiman "...Well, isn't that good?"
+    show yui school_sunset mid_left sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI037.ogg"
+    yui "Is that so?"
+    voice "audio/voice/E3/YUI/09/HA/HA033.ogg"
+    hachiman "Yep, if you think about Yukinoshita's and Hayama's circumstances, if it's us we'd probably can't stand it."
+    show yui school_sunset mid_left vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI038.ogg"
+    yui "Ahahah... But it's rare, huh... for Hikki to talk about this."
+    voice "audio/voice/E3/YUI/09/HA/HA034.ogg"
+    hachiman "...Well, naturally."
+    show yui school_sunset mid_right happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI039.ogg"
+    yui "I know! ...Do you wanna come over to my house?"
+    voice "audio/voice/E3/YUI/09/HA/HA035.ogg"
+    hachiman "Huh!?"
+    show yui school_sunset mid_center blush at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI040.ogg"
+    yui "Ah... I don't mean anything weird by that! I was just thinking since you've never been over before... That's why... maybe with Yukinon too..."
+    voice "audio/voice/E3/YUI/09/HA/HA036.ogg"
+    hachiman "I-I see... if we have the chance..."
+    show yui school_sunset mid_center vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI041.ogg"
+    yui "UmU!"
+    hachiman "(I was surprised for a moment there...)"
+    jump E3_YUI_09_CARDS
+
+label fight_card:
+    voice "audio/voice/E3/YUI/09/HA/HA037.ogg"
+    hachiman "...I guess siblings definitely will quarrel from tim to time, huh."
+    "Well for Yukinoshita, their quarrels are a little different"
+    show yui school_sunset mid_right surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI042.ogg"
+    yui "Then for Hikki~, do you quarrel as well?"
+    voice "audio/voice/E3/YUI/09/HA/HA038.ogg"
+    hachiman "...Well, I would say yes..."
+    voice "audio/voice/E3/YUI/09/YI/YI043.ogg"
+    yui "What happens next, how do you reconcile?"
+    voice "audio/voice/E3/YUI/09/HA/HA039.ogg"
+    hachiman "90 \%\ of the time, it's by me apologizing."
+    show yui school_sunset mid_right sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI044.ogg"
+    yui "I... see..."
+    voice "audio/voice/E3/YUI/09/HA/HA040.ogg"
+    hachiman "I don't really understand but, basically it's always my fault."
+    show yui school_sunset mid_center unimpressed at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI045.ogg"
+    yui "Hikki~ you have a weird smile when you're saying that..."
+    show yui school_sunset mid_left pout at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI060.ogg"
+    yui "I wonder what Yukinon will choose for her path of study..."
+    voice "audio/voice/E3/YUI/09/HA/HA052.ogg"
+    hachiman "Who knows?"
+    show yui school_sunset mid_left surprised at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI061.ogg"
+    yui "Eh, that's could of you!"
+    voice "audio/voice/E3/YUI/09/HA/HA053.ogg"
+    hachiman "Nah... cause she has such good results, she's not really a good reference for us..."
+    show yui school mid_left unimpressed at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI062.ogg"
+    yui "Even though it's not that..."
+    "I know what Yuigahama wants to say. Like for Miura's case, she just wants to know which class for them to be together."
+    "... But, even if I understand her feelings, I don't have any words of encouragement nor consolation."
+    voice "audio/voice/E3/YUI/09/HA/HA054.ogg"
+    hachiman "...Well, Yukinoshita and you probably can't be in the same path in the first place right?"
+    "... That's the least I could say..."
+    show yui school_sunset mid_left angry at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI063.ogg"
+    yui "...Is that so?"
+    voice "audio/voice/E3/YUI/09/HA/HA055.ogg"
+    hachiman "Be it the path study or something else, it won't be a reason for her to get distant from you."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI064.ogg"
+    yui "...Yeah, I guess so..."
+    show yui school_sunset mid_center sad at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI065.ogg"
+    yui "Hikki~ too...?"
+    voice "audio/voice/E3/YUI/09/HA/HA056.ogg"
+    hachiman "..."
+    "I didn't think the conversation would turn to me, I'd better say something."
+    hachiman "(Gahh*, don't look at me with those puppy eyes...)"
+    voice "audio/voice/E3/YUI/09/YI/YI066.ogg"
+    yui "..."
+    voice "audio/voice/E3/YUI/09/HA/HA057.ogg"
+    hachiman "... For me... I won't..."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI067.ogg"
+    yui "...I see."
+    hide yui with dissolve
+    jump E3_YUI_09_CONT
+
+
+label E3_YUI_09_CONT:
+    stop music fadeout 1.0
+    scene sidewalkB with fade
+    play music "audio/bgm/BGM32.ogg"
+    show yui school_sunset mid_center pout at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI068.ogg"
+    yui "..."
+    voice "audio/voice/E3/YUI/09/HA/HA058.ogg"
+    hachiman "..."
+    show yui school_sunset mid_center happy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI069.ogg"
+    yui "Nehh* Hikki~"
+    voice "audio/voice/E3/YUI/09/HA/HA059.ogg"
+    hachiman "...Yeah?"
+    show yui school_sunset mid_center blush at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI070.ogg"
+    yui "Ah, it's nothing!"
+    voice "audio/voice/E3/YUI/09/HA/HA060.ogg"
+    hachiman "Eh?"
+    voice "audio/voice/E3/YUI/09/YI/YI071.ogg"
+    yui "I said it's nothing! Oh! I'm heading home this way!"
+    voice "audio/voice/E3/YUI/09/HA/HA061.ogg"
+    hachiman "Wait, you..."
+    show yui school mid_left blush at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E3/YUI/09/YI/YI072.ogg"
+    yui "Jya*, B-Bye~~!"
+    hide yui with dissolve
+    play sound "audio/sfx/SE00/SE00_00.ogg"
+    $renpy.pause(delay=1, hard=True)
+    hachiman "(...W-Was it something I did?)"
+    stop music fadeout 1.0
+    $renpy.pause(delay=1, hard=True)
+    play music "audio/bgm/BGM33.ogg"
+    call loading_screen(_image = 24, duration = "short")
+    stop music fadeout 1.0
+    jump E3_CMM_08

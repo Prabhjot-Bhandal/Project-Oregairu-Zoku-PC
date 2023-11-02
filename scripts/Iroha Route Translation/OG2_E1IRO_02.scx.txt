@@ -1,0 +1,61 @@
+"Just like that... As arranged by my little devilof a Kouhai, I could only just walk to the Chiba Station obediently." 「じゃあ、約束ですよ……と、あざとい後輩に言われた俺は、大人しく千葉駅へと足を運んでいた。」
+[name]Iroha[line] "Sen~pai!"
+[name]Iroha[line] "...*sigh*, thanks for waiting!"
+[name]Hachiman[line] "Yeah, that took you long enough..."
+[name]Iroha[line] "Geez, what's that reply~~ Shouldn't you reply with "I just reached here too."?"
+[name]Hachiman[line] "...I just reached here too~"
+[name]Iroha[line] "What's with the dry expression? Well, it's good that you're here today."
+"Ishiki puffed her cheeks slightly before giving off a pretty smile and looked at me."
+"Even if it's a new year's, this girl is still so cheeky."
+[name]Iroha[line] "As expected since it's new year's, there's a lot of people at the station~"
+[name]Hachiman[line] "...So, do you have any place in mind?"
+[name]Iroha[line] "Isn't it already decided? Lucky Bag! Lucky Bag!"
+[name]Hachiman[line] "Huh? Lucky Bag?"
+[name]Iroha[line] "Oh no, senpai you don't know? A Lucky Bag is..."
+[name]Hachiman[line] "You don't have to explain what a Luck Bag is... I'm asking you what's this about."
+[name]Iroha[line] "You think of the Luck Bag during the start of a nre year. It's a must-have for the new year's."
+[name]Iroha[line] "I thought that the luck we'll receive from the Lucky Bag will be helpful to us. That's why I thought it'll be a good idea for senpai to get some luck too."
+[name]Hachiman[line] "(That is to say, she wants me to carry stuff for her...)"
+[name]Iroha[line] "Alright, let's go senpai! If we don't hurry, it'll get sold out soon!"
+[name]Hachiman[line] "Wait? Can you please not pull on my sleeve? It'll stretch..."
+"Once inside the mall, I really thought "is this really this many people in Chiba?" while I looked at the crowd that has gathered."
+"Not only that, we're here for the Lucky Bag which means it's at least an hour queuing..."
+[name]Iroha[line] "Ahh, geez, there's too many people that it's hard to walk."
+[name]Iroha[line] "Horahora, senpai! To protect a weak girl is a guy's job!"
+[name]Hachiman[line] "Even if you say it's a job, wai-t... Hah, Ugh... uh!"
+"Ishiki used me as a shield and to open a way through the crowd."
+"Something hard, then sharp, then sticky... brushed against my body. ...HEY, WHO JUST TOUCHED MY BUTT!"
+[name]Iroha[line] " Senpai, just a little more! Ah, turn right here!"
+[name]Hachiman[line] "(As expected I was really invited here to be her shield.)"
+[name]Hachiman[line] "(To have to do this during new year's. I don't feel any luck at all...)"
+[name]Iroha[line] "Ah, we're starting to get squeezed out. Senpai, let me hold on to you tighter."
+
+えつ。それは…
+(It's really crowded) 混んでるしな
+お、おう……
+
+(It's really crowded)
+[name]Hachiman[line] "Ah~... Well you know, since it's really crowded."
+[name]Iroha[line] "That's why~ If you refuse here, senpai your life as a man or person would pretty much fail."
+[name]Hachiman[line] "If I fail as a person, what should I become then..."
+[name]Iroha[line] "That's why..."
+[name]Hachiman[line] "That's why... what?"
+[name]Iroha[line] "...Please help just a bit"
+[name]Hachiman[line] "~~!"
+"Right after that, Ishiki held me tight with her slim hands while a whiff of fragrance reachd my nose."
+[name]Iroha[line] "Like this, we won't have to worry about getting separated."
+[name]Hachiman[line] "Uh yeah..."
+"What's making my heart skip, is it that smile, or the warmth I'm feeling from where she's holding...?"
+[name]Hachiman[line] "(But I guess there's only one reason.)"
+[name]Iroha[line] "Haaa~~! We got it, we got it! I'm really satisfied!"
+[name]Hachiman[line] "I see, that's good for you..."
+[name]Iroha[line] "Senpai, where shall we go next?"
+[name]Hachiman[line] "(...We're still continuing?)"
+
+(Let's rest for a bit.) ひと休みしたい
+もう帰りたい
+
+(Let's rest for a bit.)
+[name]Hachiman[line] "Let's rest for a bit first. If we go on like this, I won't be able to move my hands and legs."
+[name]Iroha[line] "I guess so. I'm a little hungry too, let's go to a cafe nearby then."
+"She unexpectedly agreed with my suggestion and lead the way."

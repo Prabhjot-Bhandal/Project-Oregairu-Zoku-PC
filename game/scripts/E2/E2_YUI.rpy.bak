@@ -1,0 +1,229 @@
+label E2_YUI_01:
+    scene khstationA
+    voice "audio/voice/E2/YUI/01/YI/YI000.ogg"
+    mystery "Ah, Hikki~!"
+    hachiman "(Hmm? This voice...)"
+    play music "audio/bgm/BGM12.ogg"
+    show yui coat far_center happy at left:
+        xoffset 375 yoffset 75
+    show yumiko coat far_center happy at center behind yui:
+        xoffset 0 yoffset 75
+    show ebina coat far_center happy at right:
+        xoffset -190 yoffset 75
+    with dissolve
+    "When I raised my head to see, I realised Yuigahama wasn't alone, she's with Miura and Ebina as well."
+    hide yui
+    hide yumiko
+    hide ebina
+    with dissolve
+    show yui coat mid_center vhappy at center with dissolve:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E2/YUI/01/YI/YI001.ogg"
+    yui "Ahaha... Yahallo~"
+    hachiman "(...Ah, she called me instinctively. Usually, for other people if they saw me they wouldn't bother.)"
+    menu E2_YUI_01_menu:
+        with dissolve
+        "Yo...":
+            "not done"
+            jump E2_YUI_01_menu
+        "Hey.":
+            "not done"
+            jump E2_YUI_01_menu
+        "...Oh, it's Yuigahama.":
+            hachiman "(A-re? Why did I sound so happy replying her? it's a bit embarrassing!)"
+            show yui coat mid_center surprised at center with dissolve:
+                xoffset 0 yoffset 75
+            voice "audio/voice/E2/YUI/01/YI/YI005.ogg"
+            yui "...!"
+            show yui coat mid_center vhappy at center with dissolve:
+                xoffset 0 yoffset 75
+            voice "audio/voice/E2/YUI/01/YI/YI006.ogg"
+            yui "Um! I'm with everyone!"
+            voice "audio/voice/E2/YUI/01/HA/HA005.ogg"
+            hachiman "I can see that."
+            hide yui with dissolve
+    show yui coat mid_center happy at left:
+        xoffset 190 yoffset 75
+    show yumiko coat mid_center frown at center behind yui:
+        xoffset 0 yoffset 75
+    show ebina coat mid_center vhappy at right behind yumiko:
+        xoffset 0 yoffset 75
+    with dissolve
+    voice "audio/voice/E2/YUI/01/EB/EB000.ogg"
+    ebina "Hallo Hallo~, Hikitani-kun."
+    voice "audio/voice/E2/YUI/01/YM/YM000.ogg"
+    yumiko "...Why, isn't it Hikio?"
+    voice "audio/voice/E2/YUI/01/HA/HA006.ogg"
+    hachiman "...Yo."
+    show yui coat mid_center vhappy at left with dissolve:
+        xoffset 190 yoffset 75
+    voice "audio/voice/E2/YUI/01/YI/YI007.ogg"
+    yui "We're out shopping today~"
+    voice "audio/voice/E2/YUI/01/HA/HA007.ogg"
+    hachiman "...I see."
+    hachiman "(Nnn? I sense something different ...Oh?)"
+    voice "audio/voice/E2/YUI/01/HA/HA008.ogg"
+    hachiman "...You're not out with Hayama and the rest today? That's rare."
+    stop music fadeout 0.75
+    show yui coat mid_center pout at left with dissolve:
+        xoffset 190 yoffset 75
+    voice "audio/voice/E2/YUI/01/YI/YI008.ogg"
+    yui "Ah..."
+    play music "audio/bgm/BGM47.ogg"
+    show yumiko coat mid_left frown at center behind yui:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E2/YUI/01/YM/YM001.ogg"
+    yumiko "..."
+    voice "audio/voice/E2/YUI/01/YI/YI009.ogg"
+    yui "A-Ah, you see, Hikki~"
+    show ebina coat mid_center happy at right behind yumiko:
+        xoffset 0 yoffset 75
+    voice "audio/voice/E2/YUI/01/EB/EB001.ogg"
+    ebina "Today's a gathering just for girls~. Hayato-kun's busy with family matters."
+    hachiman "(That's why she's in a bad mood. But it can't be helped since it's a family matter.)"
+    hachiman "(...Er, it might be better for me to retreat early)"
+    voice "audio/voice/E2/YUI/01/HA/HA009.ogg"
+    hachiman "Ah, okay then, see you..."
+    show yui coat mid_center happy at left with dissolve:
+        xoffset 190 yoffset 75
+    voice "audio/voice/E2/YUI/01/YI/YI010.ogg"
+    yui "A-Ah, See you~!"
+    hide yui
+    hide yumiko
+    hide ebina
+    with dissolve
+    stop music fadeout 1.0
+    play ambient "audio/sfx/SE05/SE05_01L.ogg"
+    hachiman "(W-wahh, that was tiring... I'd better buy the sweets for Komachi quick...)"
+    window auto hide dissolve
+    stop ambient fadeout 1.0
+    jump E2_YUI_02
+
+label E2_YUI_02:
+    scene bedroomC
+    with Fade(1.0, 0.5, 1.0)
+    play sound "audio/sfx/SE03/SE03_00L.ogg" loop
+    hachiman "(Hm? ... it's Yuigahama)"
+    "I was expecting Yuigahama to send me a text."
+    stop sound fadeout 0.75
+    window auto hide dissolve
+    play sound "audio/sfx/SE03/SE03_01.ogg"
+    play music "audio/bgm/BGM06.ogg"
+    $renpy.pause(delay=1.0, hard=False)
+    call mail_clear
+    show black with dissolve:
+        alpha 0.3
+    voice "audio/voice/E2/YUI/02/YI/YI000.ogg"
+    call mail_function("yui", "yui", "", "Hikki~ Are you free now?")
+    yui "\"Hikki~ Are you free now?\""
+    voice "audio/voice/E2/YUI/02/HA/HA000.ogg"
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    call mail_function("yui", "hachiman", "Re:", "Yeah.")
+    hachiman "\"Yeah.\""
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/02/YI/YI001.ogg"
+    call mail_function("yui", "yui", "Re2:", "The reply was fast!! But what's with the super short text?!!")
+    yui "\"The reply was fast!! But what's with the super short text?!!\""
+    voice "audio/voice/E2/YUI/02/HA/HA001.ogg"
+    hachiman "Hmm..."
+    "That said, it was my first time messaging the other day so I only just realised, Yuigahama usually respond almost immediately."
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    voice "audio/voice/E2/YUI/02/HA/HA002.ogg"
+    call mail_function("yui", "hachiman", "Re3:", "I'm getting used to messaging you now.")
+    hachiman "\"I'm getting used to messaging you now.\""
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/02/YI/YI002.ogg"
+    call mail_function("yui", "yui", "Re4:", "Ehehe~!")
+    yui "\"Ehehe~!\""
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/02/YI/YI004.ogg"
+    call mail_function("yui", "yui", "", "Anyway...")
+    yui "\"Anyway...\"" #Check translation, Yui Part 3 8:28
+    "These short texts are setting up some mood..."
+
+label E2_YUI_03:
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/03/YI/YI000.ogg"
+    call mail_function("yui", "yui", "", "Erm, it was a surprise to see you today!")
+    yui "\"Erm, it was a surprise to see you today!\""
+    hachiman "(Yeah, it really was!)"
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    voice "audio/voice/E2/YUI/03/HA/HA000.ogg"
+    call mail_function("yui", "hachiman", "Re:", "I saw a window of opportunity and escaped immediately.")
+    hachiman "\"I saw a window of opportunity and escaped immediately.\""
+    "I'm still slower than Yuigahama with my replies."
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/03/YI/YI001.ogg"
+    call mail_function("yui", "yui", "", "Erm, sorry that Yumiko was having a bad mood.")
+    yui "\"Erm, sorry that Yumiko was having a bad mood.\""
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/03/YI/YI002.ogg"
+    call mail_function("yui", "yui", "", "It's like we can't get Hayato-kun out these days, Yumiko was pretty down about it.")
+    yui "\"It's like we can't get Hayato-kun out these days, Yumiko was pretty down about it.\""
+    hachiman "(...Was that feeling down?)"
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    voice "audio/voice/E2/YUI/03/HA/HA002.ogg"
+    call mail_function("yui", "hachiman", "", "Well, hopefully nothing's wrong.")
+    hachiman "\"Well, hopefully nothing's wrong.\""
+    hachiman "(Yumiko's probably thinking that something's on with Hayama and Yukinoshita.)"
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/03/YI/YI005.ogg"
+    call mail_function("yui", "yui", "Re:", "Right~")
+    yui "\"Right~\"" #Check transaltion, Yui Part 3 9:25
+
+label E2_YUI_04:
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/02/YI/YI003.ogg" #Idk why this is in E2 > YUI > 02
+    call mail_function("yui", "yui", "", "Ah, anyways...")
+    yui "\"Ah, anyways...\""
+    "I can still hear the excitement of her voice through her texts, haha."
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/04/YI/YI000.ogg"
+    call mail_function("yui", "yui", "", "Sorry, Sable suddenly came at me so I had to stop typing halfway!")
+    yui "\"Sorry, Sable suddenly came at me so I had to stop typing halfway!\""
+    "So that's what happened? I couldn't tell from the texts at all."
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/04/YI/YI001.ogg"
+    call mail_function("yui", "yui", "", "Sable's abit lazy nowadays, maybe it's the winter?")
+    yui "\"Sable's abit lazy nowadays, maybe it's the winter?\""
+    voice "audio/voice/E2/YUI/04/HA/HA000.ogg"
+    hachiman "Erm, how would I know? ...Let's see. \"My cat is also usually curled up too, don't they do that in the winter?\""
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    call mail_function("yui", "hachiman", "Re:", "My cat is also usually curled up too, don't they do that in the winter?")
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/04/YI/YI002.ogg"
+    call mail_function("yui", "yui", "Re2:", "Maybe, maybe!")
+    yui "\"Maybe maybe!\""
+    hachiman "(But... This girl really replies too fast)"
+    hachiman "(I'm barely able to keep up... my speed's still not enough...)"
+    show komachi home mid_center vhappy at center with dissolve
+    voice "audio/voice/E2/YUI/04/KO/KO000.ogg"
+    komachi "Ne~ne~, Oni-chan~ Who're you messaging? Yukino-san? or Yui-san?"
+    call mail_clear
+    voice "audio/voice/E2/YUI/04/HA/HA001.ogg"
+    hachiman "..."
+    "Komachi's sniggering..."
+    voice "audio/voice/E2/YUI/04/HA/HA002.ogg"
+    hachiman "Komachi-chan, yes?"
+    voice "audio/voice/E2/YUI/04/KO/KO001.ogg"
+    komachi "Nothing, Komachi will coolly walk away! That's pretty high in points too! Good Night!"
+    hide komachi with dissolve
+    hachiman "(What? Did she see something embarrassing...?)"
+    call mail_clear
+    show black with dissolve:
+        alpha 0.3
+    play sound "<from 0 to 0.5>audio/sfx/SE03/SE03_00L.ogg"
+    voice "audio/voice/E2/YUI/04/YI/YI003.ogg"
+    call mail_function("yui", "yui", "", "I'm going to shower now~! Good Night~!")
+    yui "\"I'm going to shower now~! Good Night~!\""
+    play sound "audio/sfx/SE03/SE03_02.ogg"
+    voice "audio/voice/E2/YUI/04/HA/HA003.ogg"
+    call mail_function("yui", "hachiman", "Re:", "Good Night.")
+    hachiman "\"Good Night.\" (But did she have to report to me about these things? You should be more shy about it!)"
+    hachiman "(Does everyone discuss these things?)"
+    hachiman "(Since it's just mail, it's better. If it's SNS, if you didn't reply immediately, you might get bullied, scary.)"
+    "...However talking to Yuigahama about these mundane things is strangely fun for me too."
+    call mail_clear
+    jump E3_CMM_01
+
+#label E2_YUI_05:
